@@ -1,0 +1,25 @@
+import Vue from 'vue'
+import Vuex from 'vuex'
+
+import getters from './getters'
+import actions from './actions'
+import mutations from './mutations'
+
+Vue.use(Vuex)//告诉vue,需要用vuex
+
+//暴露出去store
+export default new Vuex.Store({
+  state: {
+    todos: [
+      {
+        id: 1,
+        text: 'first job'
+      }
+    ]
+  },
+  getters,
+  actions,
+  mutations
+})
+
+

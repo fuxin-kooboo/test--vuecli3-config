@@ -1,0 +1,7 @@
+@include media(tablet) {
+  .truste_box_overlay {
+    position: fixed;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+}

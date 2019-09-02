@@ -1,0 +1,363 @@
+.title {
+  font-size: .24rem;
+  line-height: .31rem;
+  font-weight: 700;
+
+  &-bold {
+    font-weight: 700;
+  }
+
+  &-small {
+    font-size: .17rem;
+    line-height: .25rem;
+  }
+}
+
+.link {
+  font-size: .12rem;
+  color: $link-color;
+}
+
+.tip-error {
+  color: $error-color;
+  padding: .05rem .1rem;
+}
+
+//app-notification
+.app-notification {
+  max-width: 100%;
+  margin-top: .04rem;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+
+  @include media(tablet) {
+    margin-top: .5rem;
+  }
+
+  .notification-title {
+    font-size: .16rem;
+    text-align: center;
+  }
+
+  .notification-content {
+    font-size: .14rem;
+    text-align: center;
+  }
+}
+
+.BackToAccountView {
+  font-size: .17rem;
+  font-weight: 700;
+  color: #0066a1;
+  padding: .2rem .1rem;
+  display: inline-flex;
+  align-items: center;
+
+  .icon {
+    transform: rotate(90deg);
+    width: .15rem;
+    height: .15rem;
+  }
+
+  @include media(tablet) {
+    font-size: .21rem;
+  }
+}
+
+.DetailsSection {
+  .Accordion_header {
+    .Accordion_arrow {
+      .icon {
+        color: $blue;
+      }
+    }
+  }
+
+  .AppButton {
+    width: 100%;
+    padding: .08rem .15rem;
+  }
+
+  &.container {
+    padding-left: .1rem;
+    padding-right: .1rem;
+    margin-bottom: .87rem;
+
+    @include media(tablet) {
+      margin-bottom: .4rem;
+      padding-left: .15rem;
+      padding-right: .15rem;
+    }
+  }
+
+  .Product {
+    margin-bottom: .07rem;
+    border: .01rem solid #979797;
+
+    @include media(tablet) {
+      margin-bottom: .14rem;
+    }
+  }
+}
+
+.privacyDeclaration {
+  color: #252525;
+  font-size: .14rem;
+  line-height: .24rem;
+  font-weight: 400;
+  padding: .4rem 0;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: .2rem;
+    line-height: .31rem;
+    font-weight: 700;
+    color: $blue;
+  }
+
+  a {
+    color: $blue;
+  }
+}
+
+.PersoanlDetail {
+  .privacyDeclaration {
+    padding: 0 .1rem .175rem;
+  }
+
+  &-signUp {
+    .privacyDeclaration {
+      padding: 0;
+    }
+  }
+}
+
+.closeButton {
+  color: $blue;
+  width: .12rem;
+  height: .12rem;
+  border-right: solid .2rem transparent;
+  border-top: solid .1rem transparent;
+  border-bottom: solid .1rem transparent;
+  z-index: 2;
+
+  @include media(tablet) {
+    right: .28rem;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: .2rem;
+    height: .017rem;
+    top: 50%;
+    transform: rotate(48deg);
+    background-color: $blue;
+  }
+
+  &::after {
+    transform: rotate(-48deg);
+  }
+}
+
+// common-form
+
+.Common {
+  &_form {
+    width: 5rem;
+    margin: .5rem auto;
+    padding: .15rem;
+    border: .01rem solid #979797;
+    max-width: 100%;
+
+    .title {
+      margin-bottom: .2rem;
+    }
+
+    .Form_control {
+      border: .01rem solid $border-color;
+      line-height: normal;
+      padding: .13rem .1rem;
+    }
+
+    .AppButton {
+      margin-bottom: .1rem;
+      width: 100%;
+    }
+
+    .link-wrapper {
+      margin-bottom: .05rem;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      &.account-status {
+        color: $error-color;
+      }
+    }
+
+    .link {
+      font-size: .14rem;
+      display: inline-flex;
+      align-items: center;
+
+      .icon-chevron-thin-down {
+        transform: rotate(-90deg);
+        width: .1rem;
+        height: .1rem;
+      }
+
+      &.loading {
+        color: #d8d8d8 !important;
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+// no-scroll
+.no-scroll {
+  overflow: hidden !important;
+  height: 100%;
+
+  body {
+    height: 100%;
+  }
+}
+
+.DiscountBox {
+  &_title {
+    color: $blue;
+    font-weight: 500;
+    line-height: .28rem;
+    font-size: .17rem;
+    padding: .04rem .1rem;
+
+    @include media(tablet) {
+      padding: .02rem 0;
+    }
+  }
+
+  &-accordion {
+    margin-top: .1rem;
+    background: $baby-blue;
+    padding: .12rem .15rem;
+
+    .Accordion_header {
+      padding: 0;
+      background: none;
+    }
+
+    .Accordion_title {
+      font-size: .14rem;
+      font-weight: 800;
+    }
+
+    .Accordion_arrow {
+      margin: 0;
+
+      .icon {
+        width: .16rem;
+        height: .16rem;
+        color: $blue;
+      }
+    }
+
+    .Accordion_body {
+      padding: .1rem 0 0;
+    }
+  }
+
+  &_form {
+    display: flex;
+
+    .input-discount {
+      margin-bottom: 0;
+      flex-grow: 1;
+
+      .Form_control {
+        padding: .06rem .1rem;
+        border: none;
+        border-radius: .02rem;
+        font-size: .21rem;
+        font-weight: 700;
+        color: $dark-purple;
+        text-align: center;
+
+        @include placeholder($input-placeholder, 400);
+      }
+    }
+
+    .button-discount {
+      color: #fff;
+      margin-left: .1rem;
+      width: auto !important;
+      min-width: 1.2rem;
+
+      &.disabled,
+      &.loading,
+      &:disabled {
+        background: $blue !important;
+        cursor: default;
+
+        @include opacity(0.6);
+      }
+    }
+  }
+
+  .coupon-apply-info {
+    display: flex;
+    font-size: .14rem;
+    font-weight: 700;
+    line-height: .24rem;
+
+    .icon {
+      flex-shrink: 0;
+      margin-right: .04rem;
+    }
+
+    &.coupon-valid {
+      color: $success;
+    }
+
+    &.coupon-invalid {
+      color: $error-color;
+      margin-top: .1rem;
+    }
+  }
+}
+
+.discount_calculation {
+  margin-top: .27rem;
+
+  &-title {
+    color: $blue;
+    font-weight: 500;
+    line-height: .22rem;
+    margin-bottom: .08rem;
+    padding-left: .1rem;
+
+    @include media(tablet) {
+      padding-left: 0;
+    }
+  }
+
+  &-box {
+    // border: #fff !important;
+    // margin-bottom: 0 !important;
+
+    .MonthlyPrice {
+      font-weight: 500;
+      color: $font-black;
+      line-height: .18rem;
+      padding: .03rem 0;
+    }
+  }
+}

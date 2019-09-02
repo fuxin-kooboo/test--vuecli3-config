@@ -1,0 +1,98 @@
+
+.Form_label {
+  display: inline-block;
+  font-weight: 400;
+  font-size: .12rem;
+
+  .link {
+    font-size: inherit;
+    margin-left: .06rem;
+  }
+}
+
+.Form_control {
+  display: block;
+  width: 100%;
+  color: $font-black;
+  padding: .1rem;
+  background-color: #fff;
+  background-clip: padding-box;
+  font-weight: 500;
+  font-size: .16rem;
+  line-height: .23rem;
+  border-style: solid;
+  border-width: 0 0 .02rem 0;
+  border-color: $border-color;
+
+  @include placeholder($input-placeholder, 400);
+}
+
+.WithoutFormControlBorder {
+  .Form_control {
+    border: none;
+  }
+}
+
+.Form_group {
+  margin-bottom: .28rem;
+  position: relative;
+
+  &Password {
+    position: relative;
+  }
+}
+
+.Form_tip {
+  font-size: .14rem;
+  color: $font-black;
+  margin-bottom: .2rem;
+
+  .link {
+    font-size: inherit;
+  }
+}
+
+.Form_group.error {
+  .Form_control {
+    border-color: $error-color !important;
+  }
+}
+
+.Form_input-withBorder {
+  .Form_label {
+    font-size: .16rem;
+    font-weight: 400;
+    color: #666;
+    line-height: .24rem;
+    margin-bottom: .04rem;
+  }
+
+  .Form_group {
+    .Form_control {
+      border: solid .01rem #9b9b9b;
+      background-color: rgba(216, 216, 216, .25);
+      padding: .08rem .1rem .07rem;
+    }
+
+    &.error {
+      .Form_control {
+        border-color: #e04971;
+      }
+    }
+  }
+}
+
+input.Form_control[disabled="disabled"],
+input.Form_control[disabled],
+input.Form_control:disabled {
+  -webkit-opacity: 1;
+  opacity: 1;
+  -webkit-text-fill-color: $font-black;
+  color: $font-black;
+}
+
+.SelectGroup.error {
+  .multiselect__tags {
+    border-color: $error-color !important;
+  }
+}

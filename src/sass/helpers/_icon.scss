@@ -1,0 +1,78 @@
+.icon {
+  &.icon-password-eye,
+  &.icon-password-eye-show {
+    width: .3rem;
+    height: .16rem;
+  }
+
+  &.icon-arrow-left {
+    width: .14rem;
+    height: .14rem;
+    position: relative;
+    top: .01rem;
+  }
+
+  &.icon-tick {
+    width: .2rem;
+    height: .18rem;
+  }
+
+  &.icon-tick-red {
+    width: .5rem;
+    height: .5rem;
+  }
+
+  &.icon-errorIcon {
+    width: .5rem;
+    height: .5rem;
+  }
+
+  &.icon-pencel,
+  &.icon-cancel {
+    width: .1466rem;
+    height: .1466rem;
+    margin-right: .1rem;
+    color: #4a4a4a;
+  }
+
+  &.icon-phone {
+    width: .34rem;
+    height: .3rem;
+  }
+
+  &.icon-avatar {
+    width: .16rem;
+    height: .22rem;
+    pointer-events: none;
+  }
+
+  &.icon-pdf {
+    color: rgb(255, 85, 98);
+  }
+
+  &.icon-pinterest {
+    transform: rotate(90deg);
+  }
+}
+
+.icon_box {
+  display: inline-flex;
+  width: .9rem;
+  height: .57rem;
+  padding: .05rem;
+  border: solid 1px $icon-border-color;
+  border-radius: .02rem;
+  background: #eee;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    flex-shrink: 0;
+    flex-grow: 0;
+  }
+}
